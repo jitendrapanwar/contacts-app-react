@@ -11,19 +11,25 @@ class ContactList extends Component {
     this.props.fetchContacts(); 
   }
 
-	render() {
+  findContacts = (contact) => {
     const { searchText } = this.props;
+    return contact.name.first.indexOf(searchText) > -1
+  }
+
+  showContacts = (contact) => {
+    return  <ListItem key={contact.login.uuid} button>
+              <ContactItem contact={contact} />
+            </ListItem>          
+  }
+
+	render() {
 		return (
       <div> 
         <List>
           {
             this.props.data.contacts
-            .filter((contact) => contact.name.first.indexOf(searchText) > -1)
-            .map((data) => {
-              return <ListItem key={data.login.uuid} button>
-                        <ContactItem  contact={data} />
-                      </ListItem>          
-            })
+            .filter(this.findContacts)
+            .map(this.showContacts)
           }
         </List>
       </div>
