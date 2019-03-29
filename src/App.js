@@ -9,13 +9,12 @@ class App extends Component {
     this.state = {
       searchText:''
     }
-
   }
 
   onSearchHandler = (text) => {
-    console.log(text)
     this.setState({searchText: text})
   }
+
   render() {
     return (
       <div className="App">
