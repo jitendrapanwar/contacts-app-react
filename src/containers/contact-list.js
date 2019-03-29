@@ -12,7 +12,7 @@ class ContactList extends Component {
   }
 
 	render() {
-     const { searchText } = this.props;
+    const { searchText } = this.props;
 		return (
       <div> 
         <List>
@@ -32,7 +32,7 @@ class ContactList extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  data: state,
+  data: state.contacts,
 })
 
 const mapDispatchToProps = (dispatch) => {
