@@ -20,7 +20,7 @@ class App extends Component {
     return (
       <div className="App">
         <SearchPanel onSearch={this.onSearchHandler}/>
-       <ContactList searchText={this.state.searchText}/>
+        <ContactList searchText={this.state.searchText}/>
       </div>
     );
   }

@@ -1,4 +1,4 @@
-import axios from 'axios';
+// import axios from 'axios';
 import contacts from '../data/contacts.json';
 
 export default function fetchContacts(){
