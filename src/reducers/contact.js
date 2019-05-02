@@ -5,11 +5,9 @@ const initialState = {
 }
 
 function contactReducer(state=initialState, action){
-  let contacts;
   switch(action.type){
     case 'FETCH_CONTACTS':
-      contacts = action.payload.results;
-      return {...state, contacts}
+      return {...state, contacts: action.payload.results}
 
     default:
     return state;
