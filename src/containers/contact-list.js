@@ -13,7 +13,8 @@ class ContactList extends Component {
 
   findContacts = (contact) => {
     const { searchText } = this.props;
-    return contact.name.first.indexOf(searchText) > -1
+    const name = `${contact.name.first} ${contact.name.last}`
+    return name.indexOf(searchText) > -1
   }
 
   showContacts = (contact) => {
@@ -27,7 +28,7 @@ class ContactList extends Component {
       <div> 
         <List>
           {
-            this.props.data.contacts
+            this.props.contacts.contacts
             .filter(this.findContacts)
             .map(this.showContacts)
           }
@@ -37,8 +38,9 @@ class ContactList extends Component {
 	}
 }
 
-const mapStateToProps = (state) => ({
-  data: state.contacts,
+
+const mapStateToProps = ( {contacts}) => ({
+  contacts,
 })
 
 const mapDispatchToProps = (dispatch) => {

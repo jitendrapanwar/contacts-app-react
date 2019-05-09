@@ -16,10 +16,11 @@ class App extends Component {
   }
 
   render() {
+    const { searchText } = this.state;
     return (
       <div className="App">
         <SearchPanel onSearch={this.onSearchHandler}/>
-        <ContactList searchText={this.state.searchText}/>
+        <ContactList searchText={searchText}/>
       </div>
     );
   }

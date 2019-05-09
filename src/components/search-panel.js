@@ -1,16 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class SearchPanel extends Component {
+const SearchPanel = (props) => (
 
-  onChangeHandler = (e) => {
-    this.props.onSearch(e.target.value)
-  }
-
-  render() {
-    return (
-      <input onChange={this.onChangeHandler}></input>
-    )
-  }
-}
+  // onChangeHandler = (e) => {
+  //   this.props.onSearch(e.target.value)
+  // } 
+      <input onChange={(e) => props.onSearch(e.target.value)}></input>
+)
 
 export default SearchPanel;
