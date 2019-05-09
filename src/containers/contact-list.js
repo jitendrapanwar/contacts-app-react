@@ -25,7 +25,7 @@ class ContactList extends Component {
 
 	render() {
 		return (
-      <div> 
+      <div className="contact-list"> 
         <List>
           {
             this.props.contacts.contacts
