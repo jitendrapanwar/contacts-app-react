@@ -1,20 +1,23 @@
 .App {
-  text-align: center;
-  width: 300px;
-  margin: 0 auto;
+  padding: 0px 20px 0px 20px;
+  height: 568px;
+  display: flex;
+  flex-direction: column;
 }
 
 .App .contact-list {
-  margin: 0 auto;
-  height: 400px;
+  height: calc(100% - 20px);
+  border: 1px solid #ccc; 
+  padding-bottom: 20px;
+  order:0;
 }
 
 .App .contact-list ul {
-  margin: 0 auto;
   height: 100%;
   overflow: auto;
 }
 
 .App .search-panel {
   width: 100%;
+  /* order:2; */
 }
